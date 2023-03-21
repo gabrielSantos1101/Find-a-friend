@@ -12,7 +12,6 @@
       href="./assets/images/icon.svg"
       type="image/x-svg" />
     <link rel="stylesheet" href="./style.css" />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap"
       rel="stylesheet" />
@@ -21,50 +20,97 @@
   <body>
     <div class="wrapper">
       <header>
-      <nav>
-        <img src="./assets/images/logo.svg" alt="Logo do finde a friend" />
-        <div class="hamburger-menu">
-          <label for="check" class="menu">
-            <input id="check" type="checkbox" />
+        <nav>
+          <a href="#home">
+            <img src="./assets/images/logo.svg" alt="Logo do finde a friend" />
+          </a>
+          <div class="hamburger-menu">
+            <label for="check" class="menu">
+              <input id="check" type="checkbox" />
 
-            <span class="top"></span>
-            <span class="middle"></span>
-            <span class="bottom"></span>
-          </label>
-          <ul class="menu-list hidden">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#aboutApp">Sobre o app</a></li>
-            <li><a href="#pets">Animais disponíveis</a></li>
-            <li><a href="#about">Sobre a FindAFriend</a></li>
-            <li><a href="#contacts">Contato</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <main>
-        <div class="friends">
-          <div class="pets">
-            <img
-              src="./assets/images/cat-1.png"
-              alt="Imagem de um gato branco com manchas pretas em frente a uma parede verde" />
-            <img
-              src="./assets/images/cat-2.png"
-              alt="Imagem de um gato filhote com a patnha levantada em frente a uma parede aqua" />
-            <img
-              src="./assets/images/dog-1.png"
-              alt="Imagem de um pug preto olhrando para o lado em frente a uma parede amarela" />
-            <img
-              src="./assets/images/dog-2.png"
-              alt="Imagem de um corgi filhote olhrando pra frente com uma parede laranja de fundo" />
+              <span class="top"></span>
+              <span class="middle"></span>
+              <span class="bottom"></span>
+            </label>
+            <ul class="menu-list hidden">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">Sobre o app</a></li>
+              <li><a href="#pets">Animais disponíveis</a></li>
+              <li><a href="#about">Sobre a FindAFriend</a></li>
+              <li><a href="#contacts">Contato</a></li>
+            </ul>
           </div>
-          <p><strong>324 amigos</strong> na sua cidade</p>
-        </div>
-        <h1>Leve a felicidade para o seu lar</h1>
-        <div class="mobile-grid">
-          <img src="./assets/images/bg-dog.png" alt="" />
-          <button>Acesse agora</button>
-        </div>
-      </div>
-    </main>
+        </nav>
+        <section id="home">
+          <div class="header-warp">
+            <div class="friends">
+              <div class="pets">
+                <img
+                  src="./assets/images/cat-1.png"
+                  alt="Imagem de um gato branco com manchas pretas em frente a uma parede verde" />
+                <img
+                  src="./assets/images/cat-2.png"
+                  alt="Imagem de um gato filhote com a patnha levantada em frente a uma parede aqua" />
+                <img
+                  src="./assets/images/dog-1.png"
+                  alt="Imagem de um pug preto olhrando para o lado em frente a uma parede amarela" />
+                <img
+                  src="./assets/images/dog-2.png"
+                  alt="Imagem de um corgi filhote olhrando pra frente com uma parede laranja de fundo" />
+              </div>
+              <p><strong>324 amigos</strong> na sua cidade</p>
+            </div>
+
+            <h1>
+              Leve <br />
+              a felicidade para o seu lar
+            </h1>
+          </div>
+
+          <div class="wrap">
+            <div class="mosaic-grid">
+              <button>Acesse agora</button>
+            </div>
+          </div>
+        </section>
+      </header>
+      <main>
+        <section id="about">
+          <h2>Um app não, uma caixinha de amigos...</h2>
+          <div class="cards">
+            <div class="card">
+              <img
+                src="./assets/images/dog-icon1.svg"
+                alt="Icone de um cachorro" />
+              <p>
+                O <strong>FindAFriend</strong> é um produto desenvolvido para
+                você encontrar o animal de estimação ideal ao seu estilo de
+                vida!
+              </p>
+            </div>
+            <div class="card">
+              <img src="./assets/images/cat-icon.svg" alt="Icone de um gato" />
+              <p>
+                <strong>ONGs</strong> cadastram os bichinhos disponíveis para
+                adoção informando características como: porte, nível de energia,
+                nível de independência, sociabilidade e gênero.
+              </p>
+            </div>
+            <div class="card">
+              <img
+                src="./assets/images/dog-icon2.svg"
+                alt="Icone de um cachorro" />
+              <p>
+                <strong>Filtre os bichinhos</strong> de acordo com suas
+                preferências e lifestyle. Depois é só entrar em contato com a
+                ONG para agendar uma visita e conhecer pessoalmente seu
+                <strong>match perfeito!</strong>
+              </p>
+            </div>
+          </div>
+          <div class="app-screen"></div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>

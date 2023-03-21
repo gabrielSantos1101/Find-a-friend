@@ -4,6 +4,7 @@
   --bg-header-color: #e44449;
   --bg-color: #f15156;
   --text-color: #f1f1f1;
+  --section-color: #0d3b66;
 }
 
 * {
@@ -26,27 +27,32 @@ a {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--bg-color);
   font-family: 'Nunito', sans-serif;
   font-size: 1.4rem;
   color: var(--text-color);
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--bg-color);
   overflow-x: hidden;
 }
 
-header {
-  background: var(--bg-header-color);
-  padding: 2rem;
+.wrapper {
+  height: 100%;
+  width: 100%;
 }
 
+/* ==================== menu ==================== */
+
 nav {
+  background: var(--bg-header-color);
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
 }
-
-/* ============= menu ============= */
 
 .hamburger-menu {
   width: 4rem;
@@ -59,7 +65,6 @@ nav {
 }
 
 input[type='checkbox'] {
-  -webkit-appearance: none;
   display: none;
   visibility: hidden;
   display: grid;
@@ -149,89 +154,160 @@ input[type]:checked ~ span.middle {
 
 /* ================================= */
 
-:where(header, main) .wrapper {
-  max-width: 36rem;
+section {
   margin-inline: auto;
 }
 
-main {
-  padding-inline: 2rem;
+.header-warp {
+  padding-left: 4rem;
 }
 
-strong {
-  font-weight: 800;
-}
-
-.pets {
-  margin-block: 5.8rem 1rem;
+.friends {
+  margin-top: 5.2rem;
 }
 
 .pets img {
   width: 3rem;
-  outline: 3px solid #f15156;
-  border-radius: 50%;
 }
 
 .pets img + img {
   margin-left: -1rem;
+  outline: #e44449 solid 3px;
+  border-radius: 50%;
+}
+
+.pets img:hover {
+  position: relative;
+  z-index: 1;
 }
 
 h1 {
-  font-weight: 700;
-  font-size: 4.4rem;
+  font-size: 44px;
   line-height: 110%;
   letter-spacing: -0.02em;
-
-  max-width: 27rem;
-  margin-top: 3rem;
+  margin-top: 3.5rem;
+  max-width: 35rem;
 }
 
-.mobile-grid {
+.mosaic-grid {
+  margin-inline: auto;
   position: relative;
+
+  max-width: 90rem;
   width: 100%;
   height: 30rem;
-  background-image: url(./assets/images/mobile-cards.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top: 5.5rem;
+
+  margin-top: 3.3rem;
+
+  background-image: url(./assets/images/bg-dog.png),
+    url(./assets/images/mobile-cards.svg);
+  background-position: center bottom 2.3rem, center;
+  background-repeat: no-repeat, no-repeat;
 }
 
-.mobile-grid::before {
-  content: '';
-  position: absolute;
-  top: 2.2rem;
-  transform: translateX(-73%);
-  width: 27.9rem;
-  border-radius: 2rem;
-  background: #e44449;
-  height: 85%;
-  z-index: -1;
-}
+.mosaic-grid button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.mobile-grid::after {
-  content: '';
-  position: absolute;
-  top: 2.2rem;
-  width: 27.9rem;
-  transform: translateX(140%);
-  border-radius: 2rem;
-  background: #e44449;
-  height: 85%;
-  z-index: -1;
-}
-
-.mobile-grid img {
-  position: absolute;
-  right: 50%;
-  transform: translateX(50%);
-}
-
-.mobile-grid button {
+  width: 15rem;
+  height: 4rem;
+  border-radius: 1rem;
   border: none;
-  border-radius: 0.86rem;
-  padding: 1.8rem 7rem;
+
   position: absolute;
+  bottom: 5rem;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 5rem;
+  cursor: pointer;
+}
+
+.mosaic-grid button:hover {
+  filter: brightness(0.9);
+}
+
+#about {
+  position: relative;
+  z-index: -1;
+  background: white;
+  height: fit-content;
+  padding-block: 3rem;
+  color: var(--section-color);
+  padding-inline: 2rem;
+}
+
+#about h2 {
+  font-size: 3rem;
+  line-height: 110%;
+  margin-top: 7rem;
+}
+
+#about .cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-inline: auto;
+}
+
+#about .cards .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1.6rem;
+  border: 1px solid rgba(241, 81, 86, 0.3);
+  border-radius: 20px;
+  padding: 3rem;
+  background: #fdeced;
+  flex: 1 0 25rem;
+  height: 20rem;
+}
+
+#about .cards .card img {
+  width: 3rem;
+}
+
+.app-screen {
+  position: relative;
+  background-image: url(./assets/images/app-screen.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 40rem;
+}
+
+.app-screen::after {
+  content: '';
+  width: 100%;
+  height: 30rem;
+  position: absolute;
+  top: 6rem;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: #fdeced;
+  border-radius: 2rem;
+  opacity: 0.5;
+}
+
+/* ===== Scrollbar ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #f15156 #f1f1f100;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 11px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #f15156;
+  border-radius: 10px;
+  border: 2px solid #f1f1f100;
 }
