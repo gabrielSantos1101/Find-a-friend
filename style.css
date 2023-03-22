@@ -52,6 +52,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   position: sticky;
+  top: 0;
+  z-index: 99999;
 }
 
 .hamburger-menu {
@@ -233,6 +235,9 @@ h1 {
   height: fit-content;
   padding-block: 3rem;
   color: var(--section-color);
+}
+
+#about .wrap {
   padding-inline: 2rem;
 }
 
@@ -260,7 +265,7 @@ h1 {
   padding: 3rem;
   background: #fdeced;
   flex: 1 0 25rem;
-  height: 20rem;
+  height: 25rem;
 }
 
 #about .cards .card img {
@@ -290,11 +295,70 @@ h1 {
   opacity: 0.5;
 }
 
+@media (min-width: 1024px) {
+  #home {
+    display: flex;
+    justify-content: space-around;
+    height: 70rem;
+  }
+
+  .mosaic-grid {
+    height: 99%;
+    background-image: url(./assets/images/bg-dog.png),
+      url(./assets/images/desktop-cards.svg);
+    background-position: 2rem 0.5rem, top 3rem left;
+    background-size: 31rem, 74rem;
+  }
+
+  .mosaic-grid button {
+    bottom: 25rem;
+    left: 18rem;
+    width: 26rem;
+  }
+
+  #home .wrap {
+    width: 50%;
+  }
+
+  #about {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 2.8rem;
+  }
+
+  #about .wrap {
+    width: fit-content;
+  }
+
+  #about h2 {
+    font-size: 4.8rem;
+  }
+
+  #about .cards {
+    margin-top: 3.8rem;
+  }
+
+  .app-screen {
+    background: rgba(253, 241, 242, 0.5);
+    background-image: url(./assets/images/app-screen-descktop2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: auto;
+    background-size: 55rem;
+    border-radius: 2rem;
+  }
+
+  .app-screen::after {
+    display: none;
+  }
+}
+
 /* ===== Scrollbar ===== */
 /* Firefox */
 * {
   scrollbar-width: auto;
-  scrollbar-color: #f15156 #f1f1f100;
+  scrollbar-color: transparent #f1f1f100;
 }
 
 /* Chrome, Edge, and Safari */
@@ -303,11 +367,11 @@ h1 {
 }
 
 *::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--bg-header-color);
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #f15156;
+  background-color: #ffffff;
   border-radius: 10px;
   border: 2px solid #f1f1f100;
 }
