@@ -51,7 +51,7 @@ body {
 }
 
 #home {
-  margin-top: 5rem;
+  margin-top: 10rem;
 }
 
 /* ==================== menu ==================== */
@@ -311,6 +311,8 @@ h1 {
   opacity: 0.5;
 }
 
+/* ============ Media queries ============ */
+
 @media (min-width: 1024px) {
   .menu-list {
     flex-direction: row;
@@ -328,6 +330,7 @@ h1 {
   }
 
   #home {
+    margin-top: 5rem;
     display: flex;
     justify-content: space-around;
     height: 70rem;
