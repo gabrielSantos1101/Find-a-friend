@@ -43,6 +43,17 @@ body {
   width: 100%;
 }
 
+.logo a {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: 24rem;
+}
+
+#home {
+  margin-top: 5rem;
+}
+
 /* ==================== menu ==================== */
 
 nav {
@@ -51,9 +62,10 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
-  z-index: 99999;
+  z-index: 10;
 }
 
 .hamburger-menu {
@@ -63,7 +75,6 @@ nav {
   border-radius: 0.8rem;
   display: flex;
   align-items: center;
-  padding: 1rem;
 }
 
 input[type='checkbox'] {
@@ -75,8 +86,8 @@ input[type='checkbox'] {
 .menu {
   position: relative;
   cursor: pointer;
-  width: 3rem;
-  height: 1.5rem;
+  width: 100%;
+  height: 100%;
 }
 
 .menu span {
@@ -84,38 +95,33 @@ input[type='checkbox'] {
   width: 2rem;
   height: 0.4rem;
   background: var(--bg-color);
-  border-radius: 100px;
+  border-radius: 9999px;
   display: inline-block;
   transition: 0.3s ease;
   left: 0;
 }
 
 .menu span.top {
-  top: -0.1rem;
+  left: 1rem;
+  top: 1.3rem;
 }
 
 .menu span.middle {
-  top: 0.5rem;
+  left: 1rem;
+  top: 1.91rem;
 }
 
 .menu span.bottom {
-  bottom: 0;
+  left: 1rem;
+  bottom: 1.1rem;
 }
 
 input[type]:checked ~ span.top {
   transform: rotate(45deg);
   transform-origin: top left;
-  width: 2rem;
-  left: 0.4rem;
-}
-
-input[type]:checked ~ span.bottom {
-  transform: rotate(-45deg);
-  transform-origin: top left;
-  width: 2rem;
-  bottom: -0.2rem;
-  left: 0.2rem;
-  box-shadow: 0 0 1rem #49505777;
+  width: 2.3rem;
+  left: 1.3rem;
+  top: 1.1rem;
 }
 
 input[type]:checked ~ span.middle {
@@ -123,11 +129,21 @@ input[type]:checked ~ span.middle {
   opacity: 0;
 }
 
+input[type]:checked ~ span.bottom {
+  transform: rotate(-45deg);
+  transform-origin: top left;
+  width: 2.3rem;
+  bottom: 0.9rem;
+  left: 1.1rem;
+  box-shadow: 0 0 1rem #49505777;
+}
+
 .menu-list {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1.2rem;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 110%;
 
   position: absolute;
@@ -170,12 +186,12 @@ section {
 
 .pets img {
   width: 3rem;
+  outline: var(--bg-color) solid 3px;
+  border-radius: 50%;
 }
 
 .pets img + img {
   margin-left: -1rem;
-  outline: #e44449 solid 3px;
-  border-radius: 50%;
 }
 
 .pets img:hover {
@@ -296,6 +312,21 @@ h1 {
 }
 
 @media (min-width: 1024px) {
+  .menu-list {
+    flex-direction: row;
+    gap: 3rem;
+    position: unset;
+    height: fit-content;
+    padding: 0;
+    margin-right: 2rem;
+    background: unset;
+    border-radius: unset;
+  }
+
+  nav {
+    background: var(--bg-color);
+  }
+
   #home {
     display: flex;
     justify-content: space-around;
@@ -367,11 +398,10 @@ h1 {
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--bg-header-color);
+  background: rgb(42, 42, 42);
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #ffffff;
-  border-radius: 10px;
+  background-color: rgb(94, 94, 94);
   border: 2px solid #f1f1f100;
 }

@@ -1,12 +1,17 @@
 let inputMenu = document.querySelector('#check')
 let menuList = document.querySelector('.menu-list')
+const menuHamburger = document.querySelector('.hamburger-menu')
 
 inputMenu.addEventListener('change', () => {
   menuList.classList.toggle('hidden')
 })
 
-// if (window.screen.width <= 768) {
-//   menuList.classList.remove('hidden')
-// } else {
-//   menuList.classList.add('hidden')
-// }
+window.addEventListener('load', () => {
+  if (window.innerWidth >= 780) {
+    menuList.classList.toggle('hidden')
+    menuHamburger.classList.add('hidden')
+  } else {
+    menuList.classList.add('hidden')
+    menuHamburger.classList.remove('hidden')
+  }
+})
