@@ -15,3 +15,13 @@ window.addEventListener('load', () => {
     menuHamburger.classList.remove('hidden')
   }
 })
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 780) {
+    menuList.classList.toggle('hidden')
+    menuHamburger.classList.add('hidden')
+  } else {
+    menuList.classList.add('hidden')
+    menuHamburger.classList.remove('hidden')
+  }
+})
