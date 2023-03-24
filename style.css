@@ -33,9 +33,18 @@ body {
 
   width: 100vw;
   height: 100vh;
-
-  background-color: var(--bg-color);
   overflow-x: hidden;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background: var(--bg-color);
+  top: 0;
+  left: 0;
+  width: 103%;
+  height: 30rem;
 }
 
 .wrapper {
@@ -48,6 +57,10 @@ body {
   gap: 1rem;
   align-items: center;
   width: 24rem;
+}
+
+header {
+  background-color: var(--bg-color);
 }
 
 #home {
@@ -276,10 +289,10 @@ h1 {
   flex-direction: column;
   justify-content: space-around;
   font-size: 1.6rem;
-  border: 1px solid rgba(241, 81, 86, 0.3);
+  border: 1px solid rgba(241, 81, 86, 0.144);
   border-radius: 20px;
   padding: 3rem;
-  background: #fdeced;
+  background: #fdeceda0;
   flex: 1 0 25rem;
   height: 25rem;
 }
@@ -337,7 +350,7 @@ h1 {
   }
 
   .mosaic-grid {
-    height: 99%;
+    height: 95%;
     background-image: url(./assets/images/bg-dog.png),
       url(./assets/images/desktop-cards.svg);
     background-position: 2rem 0.5rem, top 3rem left;
@@ -345,7 +358,7 @@ h1 {
   }
 
   .mosaic-grid button {
-    bottom: 25rem;
+    bottom: 22.5rem;
     left: 18rem;
     width: 26rem;
   }
@@ -359,6 +372,7 @@ h1 {
     flex-direction: row-reverse;
     justify-content: space-between;
     margin-top: 2.8rem;
+    padding-inline: min(15%, 8rem);
   }
 
   #about .wrap {
@@ -379,7 +393,7 @@ h1 {
     background-repeat: no-repeat;
     background-position: center;
     height: auto;
-    background-size: 55rem;
+    background-size: min(62%, 55rem);
     border-radius: 2rem;
   }
 
@@ -387,6 +401,8 @@ h1 {
     display: none;
   }
 }
+
+/* ============================================= */
 
 /* ===== Scrollbar ===== */
 /* Firefox */
