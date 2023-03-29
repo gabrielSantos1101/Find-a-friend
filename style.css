@@ -575,13 +575,13 @@ i {
     height: 95%;
     background-image: url(./assets/images/bg-dog.png),
       url(./assets/images/desktop-cards.svg);
-    background-position: 2rem 0.5rem, top 3rem left;
-    background-size: 31rem, 74rem;
+    background-position: 2rem 0.2rem, top 3rem left;
+    background-size: 37rem, 89rem;
   }
 
   .mosaic-grid button {
-    bottom: 22.5rem;
-    left: 18rem;
+    bottom: 14.5rem;
+    left: 22rem;
     width: 26rem;
   }
 
