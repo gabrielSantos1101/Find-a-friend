@@ -1,9 +1,10 @@
 :root {
   font-size: 62.5%;
 
-  --bg-header-color: #e44449;
-  --bg-color: #f15156;
+  --Second-color: #e44449;
+  --Primary-color: #f15156;
   --text-color: #f1f1f1;
+  --Second-text-color: #f4d35e;
   --section-color: #0d3b66;
 }
 
@@ -40,7 +41,7 @@ body::after {
   content: '';
   position: absolute;
   z-index: -1;
-  background: var(--bg-color);
+  background: var(--Primary-color);
   top: 0;
   left: 0;
   width: 103%;
@@ -60,7 +61,7 @@ body::after {
 }
 
 header {
-  background-color: var(--bg-color);
+  background-color: var(--Primary-color);
 }
 
 #home {
@@ -70,7 +71,7 @@ header {
 /* ==================== menu ==================== */
 
 nav {
-  background: var(--bg-header-color);
+  background: var(--Second-color);
   padding: 2rem;
   display: flex;
   align-items: center;
@@ -107,7 +108,7 @@ input[type='checkbox'] {
   position: absolute;
   width: 2rem;
   height: 0.4rem;
-  background: var(--bg-color);
+  background: var(--Primary-color);
   border-radius: 9999px;
   display: inline-block;
   transition: 0.3s ease;
@@ -165,7 +166,7 @@ input[type]:checked ~ span.bottom {
   left: 0;
   right: 0;
   top: 8.5rem;
-  background: var(--bg-header-color);
+  background: var(--Second-color);
 
   animation: slide 0.5s ease-in-out;
 }
@@ -199,7 +200,7 @@ section {
 
 .pets img {
   width: 3rem;
-  outline: var(--bg-color) solid 3px;
+  outline: var(--Primary-color) solid 3px;
   border-radius: 50%;
 }
 
@@ -324,6 +325,215 @@ h1 {
   opacity: 0.5;
 }
 
+/* ============ Section many friends ============ */
+#many-friends {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+
+#many-friends .wrapper {
+  width: 90%;
+  background: var(--Second-color);
+  border-radius: 2rem;
+}
+
+#many-friends .wrap {
+  padding-inline: 3rem;
+  position: relative;
+}
+
+#many-friends h2 {
+  font-size: 3rem;
+  line-height: 110%;
+  margin-top: 3rem;
+  color: var(--Second-text-color);
+  text-align: center;
+}
+
+#many-friends p {
+  margin-top: 4rem;
+  text-align: justify;
+}
+
+#many-friends .wrapper .wrap p:nth-child(1) {
+  display: none;
+}
+
+#many-friends button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 2rem;
+  margin-inline: auto;
+  width: 80%;
+  height: 5.5rem;
+
+  border-radius: 0.8rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* ==================== Slider ==================== */
+
+.content {
+  width: 100%;
+  overflow-x: hidden;
+  border-radius: 2rem;
+  margin-inline: auto;
+  margin-block: 3rem 6rem;
+}
+
+.keen-slider {
+  display: flex;
+  width: 100%;
+  position: relative;
+  cursor: grab;
+}
+
+.keen-slider:active {
+  cursor: grabbing;
+}
+
+[class^='number-slide'],
+[class*=' number-slide'] {
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 500;
+  height: 300px;
+  max-height: 100vh;
+}
+
+.keen-slider__slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 4px 3px;
+  background: #f1f1f1;
+}
+
+.keen-slider__slide h3 {
+  display: flex;
+  align-items: center;
+  color: var(--section-color);
+  font-size: 1.6rem;
+  height: 30%;
+}
+
+.keen-slider__slide .image {
+  width: 100%;
+  height: 70%;
+  border-radius: 2rem;
+  background-size: cover;
+}
+
+.number-slide1 .image {
+  background-image: url('https://images.unsplash.com/photo-1519052537078-e6302a4968d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-position: center;
+}
+
+.number-slide2 .image {
+  background-image: url(./assets/images/Cleyton.png);
+}
+
+.number-slide3 .image {
+  background-image: url(./assets/images/Aldo.png);
+}
+
+.number-slide4 .image {
+  background-image: url('https://images.unsplash.com/photo-1579168765467-3b235f938439?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80');
+  background-position: center;
+}
+
+.number-slide5 .image {
+  background-image: url('https://images.unsplash.com/photo-1612143768495-89a340fc25c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGdhdG8lMjBjaW56YXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
+  background-position: center -13rem;
+}
+
+.number-slide6 .image {
+  background-image: url('https://images.unsplash.com/photo-1540690280903-410fcab2ab47?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGh1c2t5JTIwc2liZXJpYW5vfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+  background-position: center;
+}
+
+.dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+}
+
+.dot {
+  position: relative;
+  border: none;
+  width: 10px;
+  height: 10px;
+  background: #c5c5c5;
+  border-radius: 50%;
+  margin: 0 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dot:focus {
+  outline: none;
+}
+
+.dot--active {
+  background: #000;
+}
+
+.arrow {
+  display: grid;
+  place-items: center;
+
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  cursor: pointer;
+
+  background: #fcfcfc;
+  border-radius: 50%;
+}
+
+.arrow--left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.5rem;
+  color: black;
+}
+
+.arrow--right {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  color: black;
+}
+
+.arrow--disabled.arrow--left {
+  color: gray;
+}
+
+.arrow--disabled.arrow--right {
+  color: gray;
+}
+
+i {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+/* ======================================= */
+
 /* ============ Media queries ============ */
 
 @media (min-width: 1024px) {
@@ -339,7 +549,7 @@ h1 {
   }
 
   nav {
-    background: var(--bg-color);
+    background: var(--Primary-color);
   }
 
   #home {
@@ -399,6 +609,26 @@ h1 {
 
   .app-screen::after {
     display: none;
+  }
+
+  #many-friends .wrapper {
+    display: flex;
+  }
+
+  #many-friends .wrap {
+    width: 50%;
+  }
+
+  #many-friends .wrapper .wrap p:nth-child(1) {
+    display: block;
+  }
+
+  #many-friends .wrapper .wrap p:nth-child(2) {
+    display: none;
+  }
+
+  #many-friends h2 {
+    margin-bottom: 10.6rem;
   }
 }
 
