@@ -2,11 +2,12 @@
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
 
+  --tertiary-color: #0d3b66;
   --Second-color: #e44449;
   --Primary-color: #f15156;
   --text-color: #f1f1f1;
   --Second-text-color: #f4d35e;
-  --section-color: #0d3b66;
+  --founder-card-color: #fdeced;
 }
 
 * {
@@ -36,6 +37,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body::after {
@@ -66,7 +68,7 @@ header {
 }
 
 #home {
-  margin-top: 10rem;
+  padding-top: 7rem;
 }
 
 /* ==================== menu ==================== */
@@ -268,7 +270,7 @@ h1 {
   background: white;
   height: fit-content;
   padding-block: 3rem;
-  color: var(--section-color);
+  color: var(--tertiary-color);
 }
 
 #about .wrap {
@@ -385,7 +387,7 @@ h1 {
 
 /* ==================== Slider ==================== */
 
-.content {
+#many-friends .content {
   max-width: 40rem;
   width: 100%;
   overflow-x: hidden;
@@ -431,7 +433,7 @@ h1 {
 .keen-slider__slide h3 {
   display: flex;
   align-items: center;
-  color: var(--section-color);
+  color: var(--tertiary-color);
   font-size: 1.6rem;
   height: 30%;
 }
@@ -544,11 +546,122 @@ i {
   font-weight: 800;
 }
 
+/* ======= Abount frinde a friend ======= */
+
+#abount-FindAFriend {
+  color: var(--tertiary-color);
+  position: relative;
+}
+
+#abount-FindAFriend .founders {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  position: relative;
+
+  width: 32rem;
+  margin-inline: auto;
+}
+
+#abount-FindAFriend .founder {
+  width: 100%;
+  height: 28.4rem;
+  overflow: hidden;
+  border-radius: 1.7rem;
+  padding: 1rem;
+  text-align: center;
+  background: var(--founder-card-color);
+}
+
+#abount-FindAFriend .founder img {
+  width: 100%;
+  border-radius: 2rem;
+}
+
+#abount-FindAFriend .wrap {
+  padding: 2rem;
+}
+
+#abount-FindAFriend #contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  padding: 18rem 3rem;
+  border-radius: 1rem;
+
+  max-width: 208rem;
+  width: 100%;
+  margin-inline: auto;
+
+  height: 100%;
+  color: var(--text-color);
+  background-image: url(./assets/images/dogs-cartoon.svg);
+  background-repeat: no-repeat;
+  background-position: top clamp(30%, 10.9rem, 20rem) right min(5%, 0rem);
+  background-size: clamp(40rem, 100%, 87rem);
+}
+
+#abount-FindAFriend #contact::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: min(60%, 91.3%);
+  background: var(--tertiary-color);
+  border-radius: 1rem;
+}
+
+#abount-FindAFriend #contact h2 {
+  font-size: 3rem;
+  max-width: 20rem;
+}
+
+#abount-FindAFriend a {
+  display: flex;
+  gap: 0.7rem;
+  color: #f4d35e;
+  width: fit-content;
+}
+
+footer {
+  background: var(--Second-color);
+  padding-inline: 4rem;
+}
+
+footer .wrap {
+  display: flex;
+
+  flex-direction: column;
+  gap: 3rem;
+
+  width: 100%;
+  max-width: 207.4rem;
+  margin-inline: auto;
+  align-items: center;
+  justify-content: center;
+  padding-block: 3rem;
+  justify-content: space-between;
+}
 /* ======================================= */
 
 /* ============ Media queries ============ */
+@media (min-width: 400px) {
+  footer .wrap {
+    flex-direction: row;
+    gap: 0;
+  }
+}
 
 @media (min-width: 1024px) {
+  main {
+    max-width: 230rem;
+    width: 100%;
+    margin-inline: auto;
+  }
+
   .menu-list {
     flex-direction: row;
     gap: 3rem;
@@ -565,7 +678,7 @@ i {
   }
 
   #home {
-    margin-top: 5rem;
+    padding-top: 5rem;
     display: flex;
     justify-content: space-around;
     height: 70rem;
@@ -576,7 +689,7 @@ i {
     background-image: url(./assets/images/bg-dog.png),
       url(./assets/images/desktop-cards.svg);
     background-position: 2rem 0.2rem, top 3rem left;
-    background-size: 37rem, 89rem;
+    background-size: 37rem, 93rem;
   }
 
   .mosaic-grid button {
@@ -595,10 +708,14 @@ i {
     justify-content: space-between;
     margin-top: 2.8rem;
     padding-inline: min(15%, 8rem);
+
+    /* width: 100%;
+    min-width: 230rem; */
   }
 
   #about .wrap {
-    width: fit-content;
+    width: 100%;
+    max-width: 90rem;
   }
 
   #about h2 {
@@ -617,6 +734,9 @@ i {
     height: auto;
     background-size: min(62%, 55rem);
     border-radius: 2rem;
+
+    width: 100%;
+    max-width: 90rem;
   }
 
   .app-screen::after {
@@ -693,6 +813,11 @@ i {
 
   .arrow--right {
     right: -5rem;
+  }
+
+  #abount-FindAFriend #contact {
+    background-position: top min(130%, 10.8rem) right -5rem;
+    background-size: clamp(40rem, 100%, 105rem);
   }
 }
 
