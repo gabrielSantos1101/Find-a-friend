@@ -46,6 +46,7 @@ function navigation(slider) {
   function removeElement(elment) {
     elment.parentNode.removeChild(elment)
   }
+
   function createDiv(className) {
     var div = document.createElement('div')
     var classNames = className.split(' ')
