@@ -727,6 +727,15 @@ footer .wrap {
     background-position: top 7.4rem right -5rem;
     background-size: min(100%, 83rem);
   }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .menu-list {
+    flex-direction: row;
+    position: unset;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -748,7 +757,9 @@ footer .wrap {
   }
 
   nav {
+    --Primary-color: #f15156ce;
     background: var(--Primary-color);
+    backdrop-filter: blur(8px);
   }
 
   #home {

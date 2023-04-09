@@ -2,19 +2,13 @@ let inputMenu = document.querySelector('#check')
 let menuList = document.querySelector('.menu-list')
 const menuHamburger = document.querySelector('.hamburger-menu')
 
-inputMenu.addEventListener('change', () => {
-  if (window.innerWidth >= 780) {
-    menuList.classList.toggle('hidden')
-    menuHamburger.classList.add('hidden')
-  } else {
-    menuList.classList.add('hidden')
-    menuHamburger.classList.remove('hidden')
-  }
+inputMenu.addEventListener('click', () => {
+  menuList.classList.toggle('hidden')
 })
 
 window.addEventListener('load', () => {
-  if (window.innerWidth >= 780) {
-    menuList.classList.toggle('hidden')
+  if (window.innerWidth >= 900) {
+    menuList.classList.remove('hidden')
     menuHamburger.classList.add('hidden')
   } else {
     menuList.classList.add('hidden')
@@ -23,8 +17,8 @@ window.addEventListener('load', () => {
 })
 
 window.addEventListener('resize', () => {
-  if (window.innerWidth >= 780) {
-    menuList.classList.toggle('hidden')
+  if (window.innerWidth >= 900) {
+    menuList.classList.remove('hidden')
     menuHamburger.classList.add('hidden')
   } else {
     menuList.classList.add('hidden')
