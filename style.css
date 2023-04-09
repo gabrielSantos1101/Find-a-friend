@@ -575,7 +575,7 @@ i {
 
 #abount-FindAFriend .founder img {
   width: 100%;
-  border-radius: 2rem;
+  border-radius: 1.7rem;
 }
 
 #abount-FindAFriend .wrap {
@@ -592,15 +592,25 @@ i {
   border-radius: 1rem;
 
   max-width: 208rem;
-  width: 100%;
+  width: 90%;
   margin-inline: auto;
 
   height: 100%;
   color: var(--text-color);
   background-image: url(./assets/images/dogs-cartoon.svg);
   background-repeat: no-repeat;
-  background-position: top clamp(30%, 10.9rem, 20rem) right min(5%, 0rem);
-  background-size: clamp(40rem, 100%, 87rem);
+  background-position: top clamp(20%, 8.9rem, 20rem) right min(5%, -6rem);
+  background-size: clamp(34rem, 100%, 87rem);
+}
+
+#abount-FindAFriend #contact::after {
+  content: '';
+  position: absolute;
+  top: 5.6rem;
+  left: 0;
+  width: 75%;
+  height: 5rem;
+  background: white;
 }
 
 #abount-FindAFriend #contact::before {
@@ -609,7 +619,7 @@ i {
   left: 0;
   z-index: -1;
   width: 100%;
-  height: min(60%, 91.3%);
+  height: 33rem;
   background: var(--tertiary-color);
   border-radius: 1rem;
 }
@@ -649,9 +659,57 @@ footer .wrap {
 
 /* ============ Media queries ============ */
 @media (min-width: 400px) {
+  #abount-FindAFriend #contact {
+    background-position: top clamp(20%, 8.9rem, 20rem) right min(5%, -2rem);
+    background-size: clamp(34rem, 100%, 87rem);
+  }
+
+  #abount-FindAFriend #contact::after {
+    top: 5.6rem;
+    width: 65%;
+  }
+
   footer .wrap {
     flex-direction: row;
     gap: 0;
+  }
+}
+
+@media (min-width: 530px) {
+  #abount-FindAFriend #contact {
+    background-position: top clamp(20%, 8.8rem, 20rem) right -5rem;
+    background-size: clamp(40rem, 100%, 105rem);
+  }
+
+  #abount-FindAFriend #contact::before {
+    width: 100%;
+  }
+  #abount-FindAFriend #contact::after {
+    width: 70%;
+    top: 5.5rem;
+  }
+}
+
+@media (min-width: 620px) {
+  #abount-FindAFriend #contact {
+    background-position: top 7.8rem right -5rem;
+    background-size: min(100%, 83rem);
+    height: 54rem;
+  }
+
+  #abount-FrindeAFriend #contact::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 10rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  #abount-FindAFriend #contact {
+    background-position: top 7.4rem right -5rem;
+    background-size: min(100%, 83rem);
   }
 }
 
@@ -685,15 +743,15 @@ footer .wrap {
   }
 
   .mosaic-grid {
-    height: 95%;
+    height: 94.8%;
     background-image: url(./assets/images/bg-dog.png),
       url(./assets/images/desktop-cards.svg);
-    background-position: 2rem 0.2rem, top 3rem left;
-    background-size: 37rem, 93rem;
+    background-position: 2rem 0.9rem, top 3rem left;
+    background-size: 36.8rem, 90rem;
   }
 
   .mosaic-grid button {
-    bottom: 14.5rem;
+    bottom: 9rem;
     left: 22rem;
     width: 26rem;
   }
@@ -815,9 +873,75 @@ footer .wrap {
     right: -5rem;
   }
 
+  #abount-FindAFriend .contain {
+    max-width: 170rem;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  #abount-FindAFriend .contain .content {
+    display: flex;
+    font-size: 2rem;
+    width: 103rem;
+    gap: 4.4rem;
+    margin-bottom: 6rem;
+  }
+
+  #abount-FindAFriend .contain .content h2 {
+    font-size: 4rem;
+  }
+
+  #abount-FindAFriend .founders {
+    width: 100%;
+    cursor: default;
+  }
+
+  #abount-FindAFriend .founder {
+    height: fit-content;
+  }
+
+  #abount-FindAFriend .founders p,
+  .founders strong {
+    font-size: 2rem;
+    color: var(--tertiary-color);
+  }
+
   #abount-FindAFriend #contact {
-    background-position: top min(130%, 10.8rem) right -5rem;
+    background-position: top min(130%, 7.1rem) right -5rem;
     background-size: clamp(40rem, 100%, 105rem);
+  }
+
+  #abount-FindAFriend #contact::after {
+    content: '';
+    position: absolute;
+    top: 5.54rem;
+    left: 0;
+    width: 70%;
+    height: 5rem;
+    background: white;
+  }
+}
+
+/* testendo  lime*/
+
+@media (min-width: 1200px) {
+  #abount-FindAFriend #contact {
+    background-position: top min(130%, 6.1rem) right -5rem;
+    background-size: clamp(40rem, 100%, 105rem);
+  }
+
+  #abount-FindAFriend #contact::after {
+    top: 5.5rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  #abount-FindAFriend #contact {
+    background-position: top min(130%, 6.8rem) right -5rem;
+  }
+
+  #abount-FindAFriend #contact::after {
+    display: none;
   }
 }
 
