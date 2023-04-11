@@ -16,6 +16,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
 .hidden {
   display: none !important;
 }
@@ -37,7 +42,6 @@ body {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 body::after {
@@ -567,6 +571,7 @@ i {
   position: relative;
   margin-inline: auto;
   margin-top: 6rem;
+  touch-action: pan-y;
 }
 
 #abount-FindAFriend .founders::-webkit-scrollbar {
@@ -935,7 +940,7 @@ footer .wrap {
   }
 
   #abount-FindAFriend #contact {
-    background-position: top min(130%, 7.1rem) right -5rem;
+    background-position: top min(130%, 6.8rem) right -5rem;
     background-size: clamp(40rem, 100%, 105rem);
   }
 
