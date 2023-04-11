@@ -101,7 +101,6 @@ nav {
 input[type='checkbox'] {
   display: none;
   visibility: hidden;
-  display: grid;
 }
 
 .menu {

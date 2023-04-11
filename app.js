@@ -6,6 +6,15 @@ inputMenu.addEventListener('click', () => {
   menuList.classList.toggle('hidden')
 })
 
+const navLinks = document.querySelectorAll('.menu-list a[href^="#"]')
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    menuList.classList.add('hidden')
+    inputMenu.checked = false
+  })
+})
+
 window.addEventListener('load', () => {
   if (window.innerWidth >= 900) {
     menuList.classList.remove('hidden')
