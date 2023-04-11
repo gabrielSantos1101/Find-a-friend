@@ -1,4 +1,4 @@
-# Finde a Friend
+# Find a Friend
 
 Projeto de layout de uma instituição de adoração de animais
 
@@ -7,7 +7,7 @@ Projeto de layout de uma instituição de adoração de animais
 </p>
 
 <p align="center">
-  <a href="https://gabriel-santos01.github.io/Find-a-friend/" target = "__blank">
+  <a href="https://finde-a-friend.netlify.app/" target = "__blank">
   <img src=".github/preview.png" width="100%">
   </a>
 <a href="https://www.figma.com/file/V3OhnxaFrPSppQwOdXlgyC/GCC-%231---FindAFriend-(Community)?node-id=1-147&t=Z11lADWaamxTJmRJ-0">- Figma</a>

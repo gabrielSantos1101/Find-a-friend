@@ -21,10 +21,6 @@ html {
   scroll-padding-top: 90px;
 }
 
-.hidden {
-  display: none !important;
-}
-
 ul {
   list-style: none;
 }
@@ -265,129 +261,6 @@ h1 {
   filter: brightness(0.9);
 }
 
-/* ================ about ================ */
-
-#about {
-  position: relative;
-  z-index: -1;
-  background: white;
-  height: fit-content;
-  padding-block: 3rem;
-  color: var(--tertiary-color);
-}
-
-#about .wrap {
-  padding-inline: 2rem;
-}
-
-#about h2 {
-  font-size: 3rem;
-  line-height: 110%;
-  margin-top: 7rem;
-}
-
-#about .cards {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-  margin-inline: auto;
-}
-
-#about .cards .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  font-size: 1.6rem;
-  border: 1px solid rgba(241, 81, 86, 0.144);
-  border-radius: 20px;
-  padding: 3rem;
-  background: #fdeceda0;
-  flex: 1 0 29rem;
-  height: 25rem;
-}
-
-#about .cards .card img {
-  width: 3rem;
-}
-
-.app-screen {
-  position: relative;
-  background-image: url(./assets/images/app-screen.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 40rem;
-}
-
-.app-screen::after {
-  content: '';
-  width: 100%;
-  height: 30rem;
-  position: absolute;
-  top: 6rem;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  background: #fdeced;
-  border-radius: 2rem;
-  opacity: 0.5;
-}
-
-/* ============ Section many friends ============ */
-#many-friends {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 4rem;
-}
-
-#many-friends .wrapper {
-  width: 90%;
-  background: var(--Second-color);
-  border-radius: 2rem;
-}
-
-#many-friends .wrap {
-  padding-inline: 3rem;
-  position: relative;
-}
-
-#many-friends h2 {
-  font-size: 3rem;
-  line-height: 110%;
-  margin-top: 3rem;
-  color: var(--Second-text-color);
-  text-align: center;
-}
-
-#many-friends p {
-  margin-top: 4rem;
-  text-align: justify;
-}
-
-#many-friends .wrapper .wrap p:nth-child(1) {
-  display: none;
-}
-
-#many-friends button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin-top: 2rem;
-  margin-inline: auto;
-  width: 80%;
-  height: 5.5rem;
-
-  border-radius: 0.8rem;
-  border: none;
-  cursor: pointer;
-}
-
-#many-friends button:hover {
-  filter: brightness(0.9);
-}
-
 /* ==================== Slider ==================== */
 
 #many-friends .content {
@@ -425,12 +298,11 @@ h1 {
 }
 
 .keen-slider__slide {
-  display: flex;
-  flex-direction: column;
   align-items: center;
 
   padding: 4px 3px;
   background: #f1f1f1;
+  height: 20rem;
 }
 
 .keen-slider__slide h3 {
@@ -549,11 +421,140 @@ i {
   font-weight: 800;
 }
 
+/* ================ about ================ */
+
+#about {
+  position: relative;
+  z-index: -1;
+  background: white;
+  height: fit-content;
+  padding-block: 3rem;
+  color: var(--tertiary-color);
+}
+
+#about .wrap {
+  padding-inline: 2rem;
+}
+
+#about h2 {
+  font-size: 3rem;
+  line-height: 110%;
+  margin-top: 7rem;
+}
+
+#about .cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-inline: auto;
+}
+
+#about .cards .card {
+  justify-content: space-around;
+  font-size: 1.6rem;
+  border: 1px solid rgba(241, 81, 86, 0.144);
+  border-radius: 20px;
+  padding: 3rem;
+  background: #fdeceda0;
+  flex: 1 0 29rem;
+  height: 25rem;
+}
+
+#about .cards .card img {
+  width: 3rem;
+}
+
+.app-screen {
+  position: relative;
+  background-image: url(./assets/images/app-screen.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 40rem;
+}
+
+.app-screen::after {
+  content: '';
+  width: 100%;
+  height: 30rem;
+  position: absolute;
+  top: 6rem;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: #fdeced;
+  border-radius: 2rem;
+  opacity: 0.5;
+}
+
+/* ============ Section many friends ============ */
+#many-friends {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+
+#many-friends .wrapper {
+  width: 90%;
+  background: var(--Second-color);
+  border-radius: 2rem;
+}
+
+#many-friends .wrap {
+  padding-inline: 3rem;
+  position: relative;
+}
+
+#many-friends h2 {
+  font-size: 3rem;
+  line-height: 110%;
+  margin-top: 3rem;
+  color: var(--Second-text-color);
+  text-align: center;
+}
+
+#many-friends p {
+  margin-top: 4rem;
+  text-align: justify;
+}
+
+#many-friends .wrapper .wrap p:nth-child(1) {
+  display: none;
+}
+
+#many-friends button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 2rem;
+  margin-inline: auto;
+  width: 80%;
+  height: 5.5rem;
+
+  border-radius: 0.8rem;
+  border: none;
+  cursor: pointer;
+}
+
+#many-friends button:hover {
+  filter: brightness(0.9);
+}
+
 /* ======= Abount frinde a friend ======= */
 
 #abount-FindAFriend {
   color: var(--tertiary-color);
   position: relative;
+}
+
+#abount-FindAFriend .wrap {
+  padding: 0;
+}
+
+#abount-FindAFriend .content {
+  padding-inline: 2rem;
 }
 
 #abount-FindAFriend .founders {
@@ -598,14 +599,8 @@ i {
   border-radius: 1.7rem;
 }
 
-#abount-FindAFriend .wrap {
-  padding: 2rem;
-}
-
 #abount-FindAFriend #contact {
   position: relative;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   gap: 4rem;
   padding: 18rem 3rem;
@@ -623,16 +618,6 @@ i {
   background-size: clamp(34rem, 100%, 87rem);
 }
 
-#abount-FindAFriend #contact::after {
-  content: '';
-  position: absolute;
-  top: 5.6rem;
-  left: 0;
-  width: 75%;
-  height: 5rem;
-  background: white;
-}
-
 #abount-FindAFriend #contact::before {
   content: '';
   position: absolute;
@@ -642,6 +627,16 @@ i {
   height: 33rem;
   background: var(--tertiary-color);
   border-radius: 1rem;
+}
+
+#abount-FindAFriend #contact::after {
+  content: '';
+  position: absolute;
+  top: 5.6rem;
+  left: 0;
+  width: 75%;
+  height: 5rem;
+  background: white;
 }
 
 #abount-FindAFriend #contact h2 {
@@ -663,7 +658,6 @@ footer {
 
 footer .wrap {
   display: flex;
-
   flex-direction: column;
   gap: 3rem;
 
@@ -679,6 +673,10 @@ footer .wrap {
 
 /* ============ Media queries ============ */
 @media (min-width: 400px) {
+  .keen-slider__slide {
+    height: 30rem;
+  }
+
   #abount-FindAFriend #contact {
     background-position: top clamp(20%, 8.9rem, 20rem) right min(5%, -2rem);
     background-size: clamp(34rem, 100%, 87rem);
@@ -712,7 +710,7 @@ footer .wrap {
 
 @media (min-width: 620px) {
   #abount-FindAFriend #contact {
-    background-position: top 7.8rem right -5rem;
+    background-position: top 6.8rem right -5rem;
     background-size: min(100%, 83rem);
     height: 54rem;
   }
@@ -730,6 +728,11 @@ footer .wrap {
   #abount-FindAFriend #contact {
     background-position: top 7.4rem right -5rem;
     background-size: min(100%, 83rem);
+  }
+
+  #abount-FindAFriend #contact h2 {
+    font-size: 4rem;
+    max-width: 24rem;
   }
 
   .hamburger-menu {
@@ -782,9 +785,10 @@ footer .wrap {
   }
 
   .mosaic-grid button {
-    bottom: 9rem;
+    bottom: 8rem;
     left: 22rem;
-    width: 26rem;
+    width: 32rem;
+    padding-block: 3rem;
   }
 
   #home .wrap {
@@ -861,7 +865,7 @@ footer .wrap {
   }
 
   #many-friends button {
-    width: 50%;
+    width: 70%;
     margin-left: 0;
   }
 
@@ -910,12 +914,17 @@ footer .wrap {
     margin-inline: auto;
   }
 
+  #abount-FindAFriend .wrap {
+    padding: 2rem;
+  }
+
   #abount-FindAFriend .contain .content {
     display: flex;
     font-size: 2rem;
     width: 103rem;
     gap: 4.4rem;
     margin-bottom: 6rem;
+    padding-inline: 0;
   }
 
   #abount-FindAFriend .contain .content h2 {
@@ -996,4 +1005,15 @@ footer .wrap {
 *::-webkit-scrollbar-thumb {
   background-color: rgb(94, 94, 94);
   border: 2px solid #f1f1f100;
+}
+
+/* =========== Utilitario =========== */
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
 }

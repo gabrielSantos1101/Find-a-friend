@@ -10,8 +10,10 @@ const navLinks = document.querySelectorAll('.menu-list a[href^="#"]')
 
 navLinks.forEach(link => {
   link.addEventListener('click', () => {
-    menuList.classList.add('hidden')
-    inputMenu.checked = false
+    if (window.innerWidth <= 900) {
+      menuList.classList.add('hidden')
+      inputMenu.checked = false
+    }
   })
 })
 
