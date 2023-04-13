@@ -560,18 +560,19 @@ i {
 #abount-FindAFriend .founders {
   display: flex;
   gap: 2rem;
-  /* grid-auto-flow: column; */
-  overflow-y: auto;
+  position: relative;
+
+  overflow-x: auto;
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
   scroll-snap-stop: always;
   scrollbar-width: none;
+
   max-width: 134rem;
   width: 100%;
-  position: relative;
   margin-inline: auto;
   margin-top: 6rem;
-  touch-action: pan-y;
+  touch-action: pan-x;
 }
 
 #abount-FindAFriend .founders::-webkit-scrollbar {
