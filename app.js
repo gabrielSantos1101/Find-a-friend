@@ -135,3 +135,25 @@ function navigation(slider) {
 }
 
 var slider = new KeenSlider('#my-keen-slider', {}, [navigation])
+
+
+window.addEventListener('scroll', function() {
+  var sections = document.querySelectorAll('section');
+  var links = document.querySelectorAll('.menu-list a');
+  var currentSection = '';
+  
+  for (var i = 0; i < sections.length; i++) {
+    var sectionTop = sections[i].offsetTop;
+    var sectionHeight = sections[i].offsetHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      currentSection = sections[i].getAttribute('id');
+    }
+  }
+  
+  for (var i = 0; i < links.length; i++) {
+    links[i].classList.remove('active');
+    if (links[i].getAttribute('href').indexOf('#' + currentSection) !== -1) {
+      links[i].classList.add('active');
+    }
+  }
+});
